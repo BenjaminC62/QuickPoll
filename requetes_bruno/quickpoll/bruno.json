@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "quickpoll",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
