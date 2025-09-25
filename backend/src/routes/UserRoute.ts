@@ -1,5 +1,5 @@
 import express from 'express';
-import { PrismaClient } from '../generated/prisma';
+import { PrismaClient } from '../../generated/prisma';
 
 const app = express();
 const prisma = new PrismaClient();
@@ -16,8 +16,12 @@ app.post('/createUser', async (req, res) => {
         email: "cornetbenjamintest@gmail.com"
     }
 
+    const userCreated = await prisma.user.create({
+        data: userBody,
+    });
 
-})
+    res.sendStatus(200).json(userCreated)
+});
 
 app.listen(3001, () => {
     console.log('Serveur lancé sur http://localhost:3001');
