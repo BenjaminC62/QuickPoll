@@ -1,0 +1,28 @@
+meta {
+  name: create_a_user
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{users}}/createUser
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nom": "Morel",
+    "prenom": "MAthias", 
+    "email": "morel.mathias@example.com",
+    "password": "GrosSecret",
+    "confirm_password": "GrosSecret",
+    "role": "user",
+    "createdSurvey": [],
+    "responses": []
+  }
+}
+
+settings {
+  encodeUrl: true
+}

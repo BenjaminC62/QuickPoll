@@ -5,9 +5,9 @@ export interface User {
     email: string,
     password: string,
     confirm_password: string,
-    role: string,
+    role?: string,
     createdSurvey: Survey[],
-    responses: [],
+    responses: Response[],
 }
 
 export interface Response {
