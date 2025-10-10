@@ -18,8 +18,6 @@ export const createUser = async (req: Request, res: Response) => {
     password,
     confirm_password,
     role,
-    createdSurvey,
-    responses,
   } = req.body as User;
 
   try {
@@ -31,15 +29,6 @@ export const createUser = async (req: Request, res: Response) => {
         password,
         confirm_password,
         role,
-        createdSurvey: {
-          create: createdSurvey.map((s) => ({
-            question: s.question,
-            userId: s.userId,
-          })),
-        },
-        responses: {
-          create: responses,
-        },
       },
     });
 

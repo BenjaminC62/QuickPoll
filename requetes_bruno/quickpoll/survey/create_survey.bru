@@ -1,0 +1,21 @@
+meta {
+  name: create_survey
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{survey}}/createSurvey
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

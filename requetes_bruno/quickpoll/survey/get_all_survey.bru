@@ -1,0 +1,15 @@
+meta {
+  name: get_all_survey
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{survey}}/getSurveys
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
